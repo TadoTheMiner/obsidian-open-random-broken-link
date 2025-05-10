@@ -6,5 +6,6 @@
 	"description": "Expand your knowledge by visiting random broken links.",
 	"author": "TadoTheMiner",
 	"authorUrl": "https://github.com/TadoTheMiner",
+	"repo": "TadoTheMiner/obsidian-open-random-broken-link",
 	"isDesktopOnly": false
 }
