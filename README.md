@@ -1,1 +1,1 @@
-It is what it says on the tin.
+This plugin adds a command to open a random broken link in your vault. This lets you fill the holes in your knowledge
