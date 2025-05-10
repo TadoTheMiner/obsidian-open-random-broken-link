@@ -3,7 +3,7 @@
 	"name": "Open random broken link",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Expand your knowledge by visiting random broken links",
+	"description": "Expand your knowledge by visiting random broken links.",
 	"author": "TadoTheMiner",
 	"authorUrl": "https://github.com/TadoTheMiner",
 	"isDesktopOnly": false

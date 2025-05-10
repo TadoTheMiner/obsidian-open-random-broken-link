@@ -21,7 +21,7 @@
 
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
-          packages = with pkgs; [ node2nix nodejs nodePackages.pnpm yarn typescript-language-server];
+          packages = with pkgs; [  nodejs  typescript-language-server ];
         };
       });
     };
