@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-open-random-broken-link",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Expand your knowledge by visiting random broken links",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
