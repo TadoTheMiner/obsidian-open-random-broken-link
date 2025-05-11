@@ -22,15 +22,10 @@ export default class OpenRandomUnitializedNote extends Plugin {
 
 	async open() {
 		const unresolved_links = this.app.metadataCache.unresolvedLinks;
-		const unresolved_links_flattened = Object.keys(unresolved_links).flatMap((key: string) => Object.keys(unresolved_links[key])).map(file_path => this.app.vault.create(file_path + '.md', ''));
+		const unresolved_links_flattened = Object.keys(unresolved_links).flatMap((key: string) => Object.keys(unresolved_links[key]));
 		const files_with_tag_considered_broken = this.app.vault.getMarkdownFiles().filter(file => this.app.metadataCache.getFileCache(file)?.tags?.find(tag => tag.tag == this.settings.tag_to_consider_broken));
 		const index = Math.floor(Math.random() * (unresolved_links_flattened.length + files_with_tag_considered_broken.length));
-
-		
-		const file = (index < unresolved_links_flattened.length) ? await unresolved_links_flattened[index] : files_with_tag_considered_broken[index - unresolved_links_flattened.length];
-		console.log(unresolved_links_flattened);
-		console.log(files_with_tag_considered_broken);
-		console.log(index);	
+		const file = (index < unresolved_links_flattened.length) ? await this.app.vault.create(unresolved_links_flattened[index] + '.md', '') : files_with_tag_considered_broken[index - unresolved_links_flattened.length];
 		if(!file) return;
 		
 		this.app.workspace.getLeaf(false).openFile(file);
