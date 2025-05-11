@@ -1,5 +1,5 @@
 {
-	"name": "open-random-broken-link",
+	"name": "random-broken-link",
 	"version": "w.0.0",
 	"description": "Expand your knowledge by visiting random broken links.",
 	"main": "main.js",
